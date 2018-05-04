@@ -16,7 +16,7 @@ const quoteAuthorStyle = document.querySelector(".quote-author")
 
 changeThemeColor("#fafafa", "#f5f5f5", "#ffffff", "#1a1a1a")
 
-console.log(mainStylesheet.cssRules[0]);
+console.log(mainStylesheet.cssRules[3]);
 
 lightThemeButton.addEventListener("click", function(){
 	changeThemeColor("#fafafa", "#f5f5f5", "#ffffff", "#1a1a1a")

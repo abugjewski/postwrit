@@ -5,6 +5,11 @@ Prosta aplikacja webowa mająca symulować formularz tworzenia posta na forum. S
 - Pogrubienie tekstu [b][/b]
 - Pochylenie tekstu [i][/i]
 - Podkreślenie tekstu [u][u]
+- Wyśrodkowanie tekstu [center][/center]
+- Nadanie tekstu konkretnego koloru [color=xyz][color]
+- Tworzenie odnośników do stron [url=xyz][/color]
+- Wstawianie obrazków [img][/img]
+- Cytaty (z i bez autora) [quote="xyz"][/quote]
 
 
 ## Funkcje Dodatkowe
@@ -14,3 +19,4 @@ Prosta aplikacja webowa mająca symulować formularz tworzenia posta na forum. S
 
 ## Znane błędy
 - Niewłaściwe działanie przycisku "Enter" - przejścia do nowej linii - jeżeli zostanie użyty wewnątrz ciągu znaku, a nie na samym końcu
+- Prawdopodobnie będzie trzeba ograniczyć możliwość używania niektórych znaczników HTML

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700&subset=latin-ext');
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	box-sizing: border-box;
+	font-size: 100%;
+	line-height: 1.5;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+section {
+	height: 100vh;
+	flex: 1;
+	padding: 2rem;
+}
+
+a, a:visited {
+	color: #296f96;
+	text-decoration: none;
+}
+
+.theme-color-picker {
+	color: #1a1a1a;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: #eee;
+	display: flex;
+	align-items: center;
+	padding: 0.5rem;
+}
+
+.theme-color-picker button {
+	margin-left: 0.5rem;
+	height: 2rem;
+	width: 2rem;
+	border: 1px solid #ddd;
+}
+
+.theme-light {
+	background-color: #f9f9f9;
+}
+
+.theme-dark {
+	background-color: #1a1a1a;
+}
+
+.writing-section {
+	transition: background-color 1s, color 1s;
+}
+
+.preview-section {
+	transition: background-color 1s, color 1s;
+}
+
+.writing-section textarea {
+	width: 100%;
+	height: 50%;
+	resize: none;
+	font-family: Arial, serif;
+	line-height: 1.3;
+	margin-bottom: 1rem;
+	transition: background-color 1s, color 1s;
+}
+
+.writing-section button {
+	padding: 0.5rem 1rem;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+	display: block;
+}
+
+.features-block {
+	height: 200px;
+	overflow: scroll;
+}
+
+.preview-section {
+	font-family: 'Merriweather', Georgia, serif;
+}
+
+.quote-block {
+	border: 1px solid black;
+	padding: 0.5rem;
+}
+
+.quote-author {
+	font-weight: bold;
+	border-bottom: 1px solid #555;
+	margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 992px) {
+	body {
+		flex-direction: row;
+	}
+}

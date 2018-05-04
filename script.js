@@ -48,8 +48,9 @@ function changeThemeColor(wrtSectionColor, prvSectionColor, textareaColor, fontC
 	previewButton.style.color = fontColor
 	previewButton.style.border = "1px solid" + fontColor
 	previewSection.style.color = fontColor
-	mainStylesheet.cssRules[15].style.backgroundColor = "red"
-	mainStylesheet.cssRules[16].style.border = "solid 1px red"
+	mainStylesheet.cssRules[15].style.backgroundColor = wrtSectionColor
+	mainStylesheet.cssRules[15].style.border = "solid 1px" + prvSectionColor
+	mainStylesheet.cssRules[16].style.border = "solid 1px" + prvSectionColor
 }
 
 var convertBbcodeToHtml = function(text){

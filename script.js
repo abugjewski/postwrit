@@ -16,8 +16,6 @@ const quoteAuthorStyle = document.querySelector(".quote-author")
 
 changeThemeColor("#fafafa", "#f5f5f5", "#ffffff", "#1a1a1a")
 
-console.log(mainStylesheet.cssRules[3]);
-
 lightThemeButton.addEventListener("click", function(){
 	changeThemeColor("#fafafa", "#f5f5f5", "#ffffff", "#1a1a1a")
 })
@@ -41,6 +39,7 @@ previewButton.addEventListener("click", function(){
 
 function changeThemeColor(wrtSectionColor, prvSectionColor, textareaColor, fontColor){
 	wholeBody.style.color = fontColor
+	writingArea.style.color = fontColor
 	writingSection.style.backgroundColor = wrtSectionColor
 	previewSection.style.backgroundColor = prvSectionColor
 	writingArea.style.backgroundColor = textareaColor
@@ -49,7 +48,8 @@ function changeThemeColor(wrtSectionColor, prvSectionColor, textareaColor, fontC
 	previewButton.style.color = fontColor
 	previewButton.style.border = "1px solid" + fontColor
 	previewSection.style.color = fontColor
-	writingArea.style.color = fontColor
+	mainStylesheet.cssRules[15].style.backgroundColor = "red"
+	mainStylesheet.cssRules[16].style.border = "solid 1px red"
 }
 
 var convertBbcodeToHtml = function(text){

@@ -1,4 +1,4 @@
-//const mainStylesheet = document.styleSheets[0];
+const mainStylesheet = document.styleSheets[0];
 
 const wholeBody = document.querySelector("body")
 
@@ -16,7 +16,7 @@ const quoteAuthorStyle = document.querySelector(".quote-author")
 
 changeThemeColor("#fafafa", "#f5f5f5", "#ffffff", "#1a1a1a")
 
-//console.log(mainStylesheet.cssRules[0]);
+console.log(mainStylesheet.cssRules[0]);
 
 lightThemeButton.addEventListener("click", function(){
 	changeThemeColor("#fafafa", "#f5f5f5", "#ffffff", "#1a1a1a")

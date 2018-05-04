@@ -50,7 +50,7 @@ function changeThemeColor(wrtSectionColor, prvSectionColor, textareaColor, fontC
 	previewSection.style.color = fontColor
 	mainStylesheet.cssRules[15].style.backgroundColor = wrtSectionColor
 	mainStylesheet.cssRules[15].style.border = "solid 1px" + prvSectionColor
-	mainStylesheet.cssRules[16].style.border = "solid 1px" + prvSectionColor
+	mainStylesheet.cssRules[16].style.borderBottom = "solid 1px" + prvSectionColor
 }
 
 var convertBbcodeToHtml = function(text){
@@ -62,6 +62,7 @@ var convertBbcodeToHtml = function(text){
 	text = text.replace(/\[color=(.*?)\](.*?)\[\/color\]/gi, "<font color='$1'>$2</font>")
 	text = text.replace(/\[url=(.*?)\](.*?)\[\/url\]/gi, "<a href='$1'>$2</a>")
 	text = text.replace(/\[img\](.*?)\[\/img\]/gi, "<img src='$1'>")
+	text = text.replace(/\[quote\](.*?)\[\/quote\]/gi, "<div class=quote-block><div class=quote-author>Cytat:</div>$1</div>")
 	text = text.replace(/\[quote=\"(.*?)\"\](.*?)\[\/quote\]/gi, "<div class=quote-block><div class=quote-author>$1 Napisał/a:</div>$2</div>")
 	return text
 }

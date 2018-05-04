@@ -13,5 +13,4 @@ Prosta aplikacja webowa mająca symulować formularz tworzenia posta na forum. S
 - Zapisywanie sesji
 
 ## Znane błędy
-- Test
-- Test
+- Niewłaściwe działanie przycisku "Enter" - przejścia do nowej linii - jeżeli zostanie użyty wewnątrz ciągu znaku, a nie na samym końcu

@@ -58,6 +58,11 @@ a, a:visited {
 	background-color: #1a1a1a;
 }
 
+.options-area {
+	padding: 0.5rem;
+	display: flex;
+}
+
 .writing-section {
 	transition: background-color 1s, color 1s;
 }

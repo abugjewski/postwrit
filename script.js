@@ -6,7 +6,12 @@ const writingSection = document.querySelector(".writing-section")
 const previewSection = document.querySelector(".preview-section")
 
 const writingArea = document.querySelector(".writing-section textarea")
-const previewButton = document.querySelector(".writing-section button")
+const buttonsStyle = document.querySelectorAll(".writing-section button")
+
+const boldButton = document.querySelector(".bold-btn")
+const italicsButton = document.querySelector(".itali-btn")
+const underscoreButton = document.querySelector(".unders-btn")
+const previewButton = document.querySelector(".preview-btn")
 
 const lightThemeButton = document.querySelector(".theme-light")
 const darkThemeButton = document.querySelector(".theme-dark")
@@ -35,6 +40,19 @@ writingArea.addEventListener("keydown", function(event){
 	}
 })
 
+boldButton.addEventListener("click", function(){
+	formatText("[b]","[/b]")
+})
+
+italicsButton.addEventListener("click", function(){
+	formatText("[i]","[/i]")
+})
+
+underscoreButton.addEventListener("click", function(){
+	formatText("[u]","[/u]")
+})
+
+
 previewButton.addEventListener("click", function(){
 	var convertedText = writingArea.value
 	convertedText = convertBbcodeToHtml(convertedText)
@@ -48,14 +66,24 @@ function changeThemeColor(wrtSectionColor, prvSectionColor, textareaColor, fontC
 	previewSection.style.backgroundColor = prvSectionColor
 	writingArea.style.backgroundColor = textareaColor
 	writingArea.style.border = "1px solid" + prvSectionColor
-	previewButton.style.backgroundColor = prvSectionColor
-	previewButton.style.color = fontColor
-	previewButton.style.border = "1px solid" + fontColor
-	previewSection.style.color = fontColor
 	mainStylesheet.cssRules[15].style.backgroundColor = wrtSectionColor
 	mainStylesheet.cssRules[15].style.border = "1px solid" + wrtSectionColor
 	mainStylesheet.cssRules[15].style.borderRadius = "2px"
 	mainStylesheet.cssRules[16].style.borderBottom = "1px solid" + prvSectionColor
+
+	buttonsStyle.forEach(function(button){
+		button.style.backgroundColor = prvSectionColor
+		button.style.color = fontColor
+		button.style.border = "1px solid" + fontColor
+		button.style.color = fontColor
+	})
+}
+
+function formatText(startTag, endTag){
+	let selStart = writingArea.selectionStart
+	let selEnd = writingArea.selectionEnd
+	let boldText = writingArea.value.replace(writingArea.value.substring(selStart, selEnd), startTag + writingArea.value.substring(selStart, selEnd) + endTag)
+	writingArea.value = boldText
 }
 
 let convertBbcodeToHtml = function(text){

@@ -49,11 +49,12 @@ function changeThemeColor(wrtSectionColor, prvSectionColor, textareaColor, fontC
 	previewButton.style.border = "1px solid" + fontColor
 	previewSection.style.color = fontColor
 	mainStylesheet.cssRules[15].style.backgroundColor = wrtSectionColor
-	mainStylesheet.cssRules[15].style.border = "solid 1px" + prvSectionColor
-	mainStylesheet.cssRules[16].style.borderBottom = "solid 1px" + prvSectionColor
+	mainStylesheet.cssRules[15].style.border = "1px solid" + wrtSectionColor
+	mainStylesheet.cssRules[15].style.borderRadius = "2px"
+	mainStylesheet.cssRules[16].style.borderBottom = "1px solid" + prvSectionColor
 }
 
-var convertBbcodeToHtml = function(text){
+let convertBbcodeToHtml = function(text){
 	text = text.replace(/\n/gi, "<br>")
 	text = text.replace(/\[b\](.*?)\[\/b\]/gi, "<b>$1</b>")
 	text = text.replace(/\[i\](.*?)\[\/i\]/gi, "<i>$1</i>")

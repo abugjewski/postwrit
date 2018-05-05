@@ -64,6 +64,7 @@ a, a:visited {
 
 .preview-section {
 	transition: background-color 1s, color 1s;
+	font-family: 'Merriweather', Georgia, serif;
 }
 
 .writing-section textarea {
@@ -88,18 +89,12 @@ a, a:visited {
 	overflow: scroll;
 }
 
-.preview-section {
-	font-family: 'Merriweather', Georgia, serif;
-}
-
 .quote-block {
-	border: 1px solid black;
 	padding: 0.5rem;
 }
 
 .quote-author {
 	font-weight: bold;
-	border-bottom: 1px solid #555;
 	margin-bottom: 0.5rem;
 }
 

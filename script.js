@@ -25,9 +25,11 @@ darkThemeButton.addEventListener("click", function(){
 })
 
 writingArea.addEventListener("keydown", function(event){
+	let selStart = writingArea.selectionStart
+	let selEnd = writingArea.selectionEnd
 	if (event.keyCode === 13) {
 		event.preventDefault()
-		writingArea.value = writingArea.value + "\n"
+		writingArea.value = writingArea.value.substring(0, selStart) + "\n" + writingArea.value.substring(selEnd, writingArea.value.length)
 	}
 })
 

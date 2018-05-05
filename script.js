@@ -30,6 +30,8 @@ writingArea.addEventListener("keydown", function(event){
 	if (event.keyCode === 13) {
 		event.preventDefault()
 		writingArea.value = writingArea.value.substring(0, selStart) + "\n" + writingArea.value.substring(selEnd, writingArea.value.length)
+		writingArea.selectionStart = selStart
+		writingArea.selectionEnd = selStart
 	}
 })
 

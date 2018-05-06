@@ -18,5 +18,4 @@ Prosta aplikacja webowa mająca symulować formularz tworzenia posta na forum. S
 - Zapisywanie sesji
 
 ## Znane błędy
-- Problemy z właściwym działaniem przycisku Enter w środku tekstu (przejście kursora na koniec tekstu,)
 - Prawdopodobnie będzie trzeba ograniczyć możliwość używania niektórych znaczników HTML

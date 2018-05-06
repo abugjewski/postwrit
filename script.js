@@ -11,6 +11,7 @@ const buttonsStyle = document.querySelectorAll(".writing-section button")
 const boldButton = document.querySelector(".bold-btn")
 const italicsButton = document.querySelector(".itali-btn")
 const underscoreButton = document.querySelector(".unders-btn")
+const centerButton = document.querySelector(".centr-btn")
 const previewButton = document.querySelector(".preview-btn")
 
 const lightThemeButton = document.querySelector(".theme-light")
@@ -29,17 +30,6 @@ darkThemeButton.addEventListener("click", function(){
 	changeThemeColor("#1a1a1a", "#141414","#1e1e1e", "#f9f9f9")
 })
 
-writingArea.addEventListener("keydown", function(event){
-	let selStart = writingArea.selectionStart
-	let selEnd = writingArea.selectionEnd
-	if (event.keyCode === 13) {
-		event.preventDefault()
-		writingArea.value = writingArea.value.substring(0, selStart) + "\n" + writingArea.value.substring(selEnd, writingArea.value.length)
-		writingArea.selectionStart = selStart
-		writingArea.selectionEnd = selStart
-	}
-})
-
 boldButton.addEventListener("click", function(){
 	formatText("[b]","[/b]")
 })
@@ -50,6 +40,10 @@ italicsButton.addEventListener("click", function(){
 
 underscoreButton.addEventListener("click", function(){
 	formatText("[u]","[/u]")
+})
+
+centerButton.addEventListener("click", function(){
+	formatText("[center]","[/center]")
 })
 
 
